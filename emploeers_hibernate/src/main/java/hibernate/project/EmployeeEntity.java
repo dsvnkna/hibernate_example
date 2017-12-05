@@ -22,6 +22,7 @@ import org.hibernate.annotations.OptimisticLockType;
     public class EmployeeEntity implements Serializable {
 
         private static final long serialVersionUID = -1798070786993154676L;
+        EmployeeEntity employee = new EmployeeEntity();
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

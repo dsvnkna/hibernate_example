@@ -21,11 +21,9 @@ public class TestHibernate {
         emp.setLastName("user");
 
         session.save(emp);
-        //List result = new List();
         List result = session.createQuery( "from Employee" ).list();
-        for (Iterator iter = name.iterator(); iter.hasNext(); ) {
-            firstName name = (firstName) iter.next();
-            System.out.println( name.getFirstName() );
+        for (EmployeeEntity employee : result) {
+            System.out.println( employee.getFirstName() );
         }
 
 
